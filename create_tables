@@ -1,0 +1,11 @@
+Table: employee
+CREATE TABLE `thanos`.`employee` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `full_name` VARCHAR(45) NOT NULL,
+  `mobile` VARCHAR(45) NULL,
+  `joining_time` DATETIME NOT NULL,
+  `spouse_full_name` VARCHAR(45) NULL,
+  `spouse_employee_id` VARCHAR(45) NULL,
+  `centre` VARCHAR(45) NOT NULL,
+  `status` INT NOT NULL,
+  PRIMARY KEY (`id`, `centre`));
