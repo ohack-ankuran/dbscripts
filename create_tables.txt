@@ -16,3 +16,19 @@ INSERT INTO `thanos`.`employee`
 (`id`,`full_name`,`mobile`,`joining_time`,`spouse_full_name`,`spouse_employee_id`,`centre`,`status`)
 VALUES
 (<{id: }>,<{full_name: }>,<{mobile: }>,<{joining_time: }>,<{spouse_full_name: }>,<{spouse_employee_id: }>,<{centre: }>,<{status: }>);
+
+Create: outstanding_amount
+CREATE TABLE `outstanding_amount` (
+  `employee_id` int(11) NOT NULL,
+  `centre_id` int(11) NOT NULL,
+  `outstanding_amount` decimal(12,2) NOT NULL,
+  PRIMARY KEY (`employee_id`,`centre_id`)
+)
+
+Create: centre
+CREATE TABLE `centre` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(60) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name_UNIQUE` (`name`)
+)
