@@ -1,4 +1,5 @@
-Table: employee
+####Create
+#####employee
 CREATE TABLE `thanos`.`employee` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `full_name` VARCHAR(45) NOT NULL,
@@ -9,3 +10,11 @@ CREATE TABLE `thanos`.`employee` (
   `centre` VARCHAR(45) NOT NULL,
   `status` INT NOT NULL,
   PRIMARY KEY (`id`, `centre`));
+
+
+####Insert
+#####employee
+INSERT INTO `thanos`.`employee`
+(`id`,`full_name`,`mobile`,`joining_time`,`spouse_full_name`,`spouse_employee_id`,`centre`,`status`)
+VALUES
+(<{id: }>,<{full_name: }>,<{mobile: }>,<{joining_time: }>,<{spouse_full_name: }>,<{spouse_employee_id: }>,<{centre: }>,<{status: }>);
