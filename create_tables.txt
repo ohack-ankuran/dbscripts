@@ -72,3 +72,18 @@ CREATE TABLE `thanos`.`group_wages_activity` (
   `actor_employee_id` INT NULL,
   `time_updated` DATETIME NULL,
   PRIMARY KEY (`activity_id`, `centre_id`));
+  
+  Create: item_fact
+  CREATE TABLE `thanos`.`new_table` (
+  `id` BIGINT(20) NOT NULL,
+  `time_created` DATETIME NOT NULL,
+  `centre_id` INT NOT NULL,
+  `actor_full_name` VARCHAR(45) NULL,
+  `quantity` INT NOT NULL,
+  `actual_sale_price` DECIMAL(12,2) NULL,
+  `activity_id` BIGINT(20) NULL,
+  `type` INT NOT NULL,
+  `reason` INT NOT NULL,
+  `notes` VARCHAR(75) NULL,
+  PRIMARY KEY (`id`));
+
