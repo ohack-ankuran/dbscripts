@@ -90,3 +90,18 @@ CREATE TABLE `thanos`.`group_wages_activity` (
 ALTER TABLE `thanos`.`new_table` 
 CHANGE COLUMN `actual_sale_price` `actual_sale_price` DECIMAL(12,2) NULL DEFAULT 0 , RENAME TO  `thanos`.`item_fact` ;
 
+
+Create: settlement
+CREATE TABLE `thanos`.`settlement` (
+  `id` INT NOT NULL,
+  `centre_id` VARCHAR(45) NULL,
+  `time` DATETIME NOT NULL,
+  `amount_before` DECIMAL(10,2) NOT NULL,
+  `amount` DECIMAL(10,2) NOT NULL,
+  `amount_after` DECIMAL(10,2) NOT NULL,
+  `actor` INT NULL,
+  `counterparty` INT NULL,
+  `correction` TINYINT(1) NULL DEFAULT 0,
+  `notes` VARCHAR(100) NULL,
+  PRIMARY KEY (`id`));
+
