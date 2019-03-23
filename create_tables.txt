@@ -87,3 +87,6 @@ CREATE TABLE `thanos`.`group_wages_activity` (
   `notes` VARCHAR(75) NULL,
   PRIMARY KEY (`id`));
 
+ALTER TABLE `thanos`.`new_table` 
+CHANGE COLUMN `actual_sale_price` `actual_sale_price` DECIMAL(12,2) NULL DEFAULT 0 , RENAME TO  `thanos`.`item_fact` ;
+
